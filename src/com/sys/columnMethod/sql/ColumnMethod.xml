@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="ColumnMethod">
+	<typeAlias alias="ColumnMethod" type="com.sys.columnMethod.model.ColumnMethod"/>
+	
+    <sql id="getColumnMethodList_body">
+        SELECT a.* FROM manage_column_method a
+        <dynamic prepend="WHERE">
+            <isNotNull prepend="AND" property="mid"> a.mid=#mid# </isNotNull>
+            <isNotNull prepend="AND" property="columnId"> a.columnId=#columnId# </isNotNull>
+            <isNotNull prepend="AND" property="methodName"> a.methodName=#methodName# </isNotNull>
+            <isNotNull prepend="AND" property="actionPath"> a.actionPath=#actionPath# </isNotNull>
+            <isNotNull prepend="AND" property="createTime"> a.createTime=#createTime# </isNotNull>
+        </dynamic>
+  		<isNotNull prepend="" property="sortColumn">  order by $sortColumn$ </isNotNull>
+    </sql>
+
+    <select id="getColumnMethodListCount" resultClass="int">
+        SELECT COUNT(*) FROM (
+            <include refid="getColumnMethodList_body" />
+        ) AS myTable 
+    </select>
+
+    <select id="getColumnMethodList" parameterClass="ColumnMethod" resultClass="ColumnMethod">
+        SELECT * FROM (
+            <include refid="getColumnMethodList_body" />
+        ) AS myTable limit #rowStart# , #rowCount# 
+    </select>
+
+    <select id="getColumnMethod" parameterClass="ColumnMethod" resultClass="ColumnMethod">
+       <include refid="getColumnMethodList_body" />
+    </select>
+
+    <insert id="insertColumnMethod">
+        INSERT INTO manage_column_method ( 
+        <dynamic prepend="">
+			<isNotNull prepend="" property="columnId"> columnId </isNotNull>
+			<isNotNull prepend="," property="methodName"> methodName </isNotNull>
+			<isNotNull prepend="," property="actionPath"> actionPath </isNotNull>
+			<isNotNull prepend="," property="createTime"> createTime </isNotNull>
+        </dynamic>
+        )
+        VALUES (
+        <dynamic prepend="">
+		    <isNotNull prepend="" property="columnId"> #columnId# </isNotNull>
+		    <isNotNull prepend="," property="methodName"> #methodName# </isNotNull>
+		    <isNotNull prepend="," property="actionPath"> #actionPath# </isNotNull>
+		    <isNotNull prepend="," property="createTime"> #createTime# </isNotNull>
+        </dynamic>
+        )
+        <selectKey keyProperty="mid" resultClass="int">
+			SELECT @@IDENTITY AS mid 
+		</selectKey>
+    </insert>
+
+    <update id="updateColumnMethod">
+        UPDATE manage_column_method
+        <dynamic prepend="SET">
+		    <isNotNull prepend="," property="mid"> mid=#mid# </isNotNull>
+		    <isNotNull prepend="," property="columnId"> columnId=#columnId# </isNotNull>
+		    <isNotNull prepend="," property="methodName"> methodName=#methodName# </isNotNull>
+		    <isNotNull prepend="," property="actionPath"> actionPath=#actionPath# </isNotNull>
+		    <isNotNull prepend="," property="createTime"> createTime=#createTime# </isNotNull>
+        </dynamic>
+
+        <dynamic prepend="WHERE">
+        	mid = #mid#
+        </dynamic>
+    </update>
+    
+    <delete id="removeColumnMethod">
+        delete from manage_column_method where mid = #mid#
+    </delete>
+</sqlMap>

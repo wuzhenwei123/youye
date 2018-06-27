@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="ManageAdminUser">
+	<typeAlias alias="ManageAdminUser" type="com.sys.manageAdminUser.model.ManageAdminUser"/>
+	
+    <sql id="getManageAdminUserList_body">
+        SELECT a.*,b.roleId ,c.adminName as createrName, r.roleName 
+        FROM manage_admin_user a 
+        left join manage_admin_user_role b on a.adminId = b.adminId 
+        left join manage_admin_role r on r.roleId = b.roleId 
+        left join manage_admin_user c on a.createrId = c.adminId
+        <dynamic prepend="WHERE">
+            <isNotNull prepend="AND" property="adminId"> a.adminId=#adminId# </isNotNull>
+            <isNotNull prepend="AND" property="adminName"> a.adminName=#adminName# </isNotNull>
+            <isNotNull prepend="AND" property="nickName"> a.nickName like '%$nickName$%' </isNotNull>
+            <isNotNull prepend="AND" property="passwd"> a.passwd=#passwd# </isNotNull>
+            <isNotNull prepend="AND" property="realName"> a.realName like '%$realName$%' </isNotNull>
+            <isNotNull prepend="AND" property="mobile"> a.mobile=#mobile# </isNotNull>
+            <isNotNull prepend="AND" property="phone"> a.phone=#phone# </isNotNull>
+            <isNotNull prepend="AND" property="lastLogin"> a.lastLogin >= #lastLogin# </isNotNull>
+            <isNotNull prepend="AND" property="loginIP"> a.loginIP=#loginIP# </isNotNull>
+            <isNotNull prepend="AND" property="pwdModifyTime"> a.pwdModifyTime=#pwdModifyTime# </isNotNull>
+            <isNotNull prepend="AND" property="state"> a.state=#state# </isNotNull>
+            <isNotNull prepend="AND" property="createTime"> a.createTime=#createTime# </isNotNull>
+            <isNotNull prepend="AND" property="createrId"> a.createrId=#createrId# </isNotNull>
+            <isNotNull prepend="AND" property="roleId"> b.roleId=#roleId# </isNotNull>
+        </dynamic>
+  		<isNotNull prepend="" property="sortColumn">  order by $sortColumn$ </isNotNull>
+    </sql>
+
+    <select id="getManageAdminUserListCount" resultClass="int">
+        SELECT COUNT(*) FROM (
+            <include refid="getManageAdminUserList_body" />
+        ) AS myTable 
+    </select>
+
+    <select id="getManageAdminUserList" parameterClass="ManageAdminUser" resultClass="ManageAdminUser">
+        SELECT * FROM (
+            <include refid="getManageAdminUserList_body" />
+        ) AS myTable limit #rowStart# , #rowCount# 
+    </select>
+
+    <select id="getManageAdminUser" parameterClass="ManageAdminUser" resultClass="ManageAdminUser">
+       <include refid="getManageAdminUserList_body" />
+    </select>
+
+    <insert id="insertManageAdminUser">
+        INSERT INTO manage_admin_user ( 
+        <dynamic prepend="">
+			<isNotNull prepend="" property="adminName"> adminName </isNotNull>
+			<isNotNull prepend="," property="nickName"> nickName </isNotNull>
+			<isNotNull prepend="," property="passwd"> passwd </isNotNull>
+			<isNotNull prepend="," property="realName"> realName </isNotNull>
+			<isNotNull prepend="," property="mobile"> mobile </isNotNull>
+			<isNotNull prepend="," property="phone"> phone </isNotNull>
+			<isNotNull prepend="," property="lastLogin"> lastLogin </isNotNull>
+			<isNotNull prepend="," property="loginIP"> loginIP </isNotNull>
+			<isNotNull prepend="," property="pwdModifyTime"> pwdModifyTime </isNotNull>
+			<isNotNull prepend="," property="state"> state </isNotNull>
+			<isNotNull prepend="," property="createTime"> createTime </isNotNull>
+			<isNotNull prepend="," property="createrId"> createrId </isNotNull>
+			<isNotNull prepend="," property="headImg"> headImg </isNotNull>
+        </dynamic>
+        )
+        VALUES (
+        <dynamic prepend="">
+		    <isNotNull prepend="" property="adminName"> #adminName# </isNotNull>
+		    <isNotNull prepend="," property="nickName"> #nickName# </isNotNull>
+		    <isNotNull prepend="," property="passwd"> #passwd# </isNotNull>
+		    <isNotNull prepend="," property="realName"> #realName# </isNotNull>
+		    <isNotNull prepend="," property="mobile"> #mobile# </isNotNull>
+		    <isNotNull prepend="," property="phone"> #phone# </isNotNull>
+		    <isNotNull prepend="," property="lastLogin"> #lastLogin# </isNotNull>
+		    <isNotNull prepend="," property="loginIP"> #loginIP# </isNotNull>
+		    <isNotNull prepend="," property="pwdModifyTime"> #pwdModifyTime# </isNotNull>
+		    <isNotNull prepend="," property="state"> #state# </isNotNull>
+		    <isNotNull prepend="," property="createTime"> #createTime# </isNotNull>
+		    <isNotNull prepend="," property="createrId"> #createrId# </isNotNull>
+		    <isNotNull prepend="," property="headImg"> #headImg# </isNotNull>
+        </dynamic>
+        )
+        <selectKey keyProperty="adminId" resultClass="int">
+			SELECT @@IDENTITY AS adminId 
+		</selectKey>
+    </insert>
+
+    <update id="updateManageAdminUser">
+        UPDATE manage_admin_user
+        <dynamic prepend="SET">
+		    <isNotNull prepend="," property="adminId"> adminId=#adminId# </isNotNull>
+		    <isNotNull prepend="," property="adminName"> adminName=#adminName# </isNotNull>
+		    <isNotNull prepend="," property="nickName"> nickName=#nickName# </isNotNull>
+		    <isNotNull prepend="," property="passwd"> passwd=#passwd# </isNotNull>
+		    <isNotNull prepend="," property="realName"> realName=#realName# </isNotNull>
+		    <isNotNull prepend="," property="mobile"> mobile=#mobile# </isNotNull>
+		    <isNotNull prepend="," property="phone"> phone=#phone# </isNotNull>
+		    <isNotNull prepend="," property="lastLogin"> lastLogin=#lastLogin# </isNotNull>
+		    <isNotNull prepend="," property="loginIP"> loginIP=#loginIP# </isNotNull>
+		    <isNotNull prepend="," property="pwdModifyTime"> pwdModifyTime=#pwdModifyTime# </isNotNull>
+		    <isNotNull prepend="," property="state"> state=#state# </isNotNull>
+		    <isNotNull prepend="," property="createTime"> createTime=#createTime# </isNotNull>
+		    <isNotNull prepend="," property="createrId"> createrId=#createrId# </isNotNull>
+		    <isNotNull prepend="," property="headImg"> headImg=#headImg# </isNotNull>
+        </dynamic>
+
+        <dynamic prepend="WHERE">
+        	adminId = #adminId#
+        </dynamic>
+    </update>
+    
+    <delete id="removeManageAdminUser">
+        delete from manage_admin_user where adminId = #adminId#
+    </delete>
+</sqlMap>

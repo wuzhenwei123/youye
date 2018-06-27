@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="AdminRole">
+	<typeAlias alias="AdminRole" type="com.sys.adminRole.model.AdminRole"/>
+	
+    <sql id="getAdminRoleList_body">
+        SELECT a.* FROM manage_admin_role a
+        <dynamic prepend="WHERE">
+            <isNotNull prepend="AND" property="roleId"> a.roleId=#roleId# </isNotNull>
+            <isNotNull prepend="AND" property="roleName"> a.roleName=#roleName# </isNotNull>
+            <isNotNull prepend="AND" property="createTime"> a.createTime=#createTime# </isNotNull>
+            <isNotNull prepend="AND" property="state"> a.state=#state# </isNotNull>
+            <isNotNull prepend="AND" property="defaule"> a.defaule=#defaule# </isNotNull>
+            <isNotNull prepend="AND" property="roleType"> a.roleType=#roleType# </isNotNull>
+        </dynamic>
+  		<isNotNull prepend="" property="sortColumn">  order by $sortColumn$ </isNotNull>
+    </sql>
+
+    <select id="getAdminRoleListCount" resultClass="int">
+        SELECT COUNT(*) FROM (
+            <include refid="getAdminRoleList_body" />
+        ) AS myTable 
+    </select>
+
+    <select id="getAdminRoleList" parameterClass="AdminRole" resultClass="AdminRole">
+        SELECT * FROM (
+            <include refid="getAdminRoleList_body" />
+        ) AS myTable limit #rowStart# , #rowCount# 
+    </select>
+
+    <select id="getAdminRole" parameterClass="AdminRole" resultClass="AdminRole">
+       <include refid="getAdminRoleList_body" />
+    </select>
+
+    <insert id="insertAdminRole">
+        INSERT INTO manage_admin_role ( 
+        <dynamic prepend="">
+			<isNotNull prepend="" property="roleName"> roleName </isNotNull>
+			<isNotNull prepend="," property="createTime"> createTime </isNotNull>
+			<isNotNull prepend="," property="state"> state </isNotNull>
+			<isNotNull prepend="," property="defaule"> defaule </isNotNull>
+			<isNotNull prepend="," property="roleType"> roleType </isNotNull>
+        </dynamic>
+        )
+        VALUES (
+        <dynamic prepend="">
+		    <isNotNull prepend="" property="roleName"> #roleName# </isNotNull>
+		    <isNotNull prepend="," property="createTime"> #createTime# </isNotNull>
+		    <isNotNull prepend="," property="state"> #state# </isNotNull>
+		    <isNotNull prepend="," property="defaule"> #defaule# </isNotNull>
+		    <isNotNull prepend="," property="roleType"> #roleType# </isNotNull>
+        </dynamic>
+        )
+        <selectKey keyProperty="roleId" resultClass="int">
+			SELECT @@IDENTITY AS roleId 
+		</selectKey>
+    </insert>
+
+    <update id="updateAdminRole">
+        UPDATE manage_admin_role
+        <dynamic prepend="SET">
+		    <isNotNull prepend="," property="roleId"> roleId=#roleId# </isNotNull>
+		    <isNotNull prepend="," property="roleName"> roleName=#roleName# </isNotNull>
+		    <isNotNull prepend="," property="createTime"> createTime=#createTime# </isNotNull>
+		    <isNotNull prepend="," property="state"> state=#state# </isNotNull>
+		    <isNotNull prepend="," property="defaule"> defaule=#defaule# </isNotNull>
+		    <isNotNull prepend="," property="roleType"> roleType=#roleType# </isNotNull>
+        </dynamic>
+
+        <dynamic prepend="WHERE">
+        	roleId = #roleId#
+        </dynamic>
+    </update>
+    
+    <delete id="removeAdminRole">
+        delete from manage_admin_role where roleId = #roleId#
+    </delete>
+</sqlMap>

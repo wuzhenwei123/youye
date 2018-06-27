@@ -1,0 +1,352 @@
+/*我的首页*/
+.mycenterbox{width: 100%;height: 8.75rem;background: url(../tempimg/jhybg.png) no-repeat center;background-size: cover;position: relative;}
+.mycenterimgbox{width: 3.125rem;padding-top: 0.625rem;margin: 0 auto;}
+.mycenterimgbox a{display: block;width: 3.125rem;}
+.mycenterimgbox a img{width: 2.875rem;height: 2.875rem;border-radius:2.875rem;border: 2px solid white;}
+.mycentercon{width: 100%;margin-top: 0.313rem}
+.mycentercon .mynamei01{display: inline-block;border-radius: 2px;font-size: 0.75rem;color: white;background: #5ccc52;padding: 0rem 0.313rem}
+.mycentercon span{width: 100%;overflow: hidden;text-align: center;font-size: 0.938rem;color: white;display: block;}
+.mycentercon em{width: 100%;overflow: hidden;font-size: 0.75rem;color: white;text-align: center;}
+.mycenterbtnbox{width: 100%;height: 2.25rem;position: absolute;left: 0rem;bottom: 0rem;z-index: 3;}
+.mycenterbtnbox a{float: left;width: 50%;height: 2.25rem;display:block;box-sizing:border-box;}
+.mycenterbtnbox a span{display: block;font-size: 0.75rem;color: #e2e2e2;width: 100%;text-align: center;line-height: 1.45rem}
+.mycenterbtnbox a em{font-size: 0.75rem;color: white;text-align: center;line-height: 0.45rem}
+.mmyimgbg{width: 100%;height: 2.25rem;background: black;filter:alpha(opacity=30);-moz-pacity:0.30;opacity:0.30;position: absolute;bottom: 0rem;z-index: 2;}
+.groombox{width: 100%;height: 2.25rem;line-height: 2.25rem;background: white;text-align: center;overflow: hidden;}
+.groombox em{font-size: 0.875rem;display: inline-block;overflow: hidden;}
+.groombox span{font-size: 0.875rem;max-width: 5rem;display: inline-block;overflow: hidden;font-weight: 700;}
+.indorderwrap{width: 100%;float: left; box-sizing:border-box;padding: 0.313rem 0rem;background: white;border-top: 0.063rem solid #ededed;text-align: center;}
+.indorderwrap a{width: 25%;display: block;float: left;}
+.indorderwrap a i{width: 1.5rem;height: 1.5rem;margin: 0 auto 0.313rem;position: relative;}
+.indorderico01{background: url(../tempimg/order01.png) no-repeat center;background-size: 100%;}
+.indorderico02{background: url(../tempimg/order02.png) no-repeat center;background-size: 100%;}
+.indorderico03{background: url(../tempimg/order03.png) no-repeat center;background-size: 100%;}
+.indorderico04{background: url(../tempimg/order04.png) no-repeat center;background-size: 100%;}
+.mmylsbbtn01{background: url(../tempimg/userico01.png) no-repeat center;background-size: contain;}
+.mmylsbbtn02{background: url(../tempimg/userico02.png) no-repeat center;background-size: contain;}
+.mmylsbbtn03{background: url(../tempimg/userico03.png) no-repeat center;background-size: contain;}
+.mmylsbbtn04{background: url(../tempimg/userico04.png) no-repeat center;background-size: contain;}
+.mmylsbbtn05{background: url(../tempimg/userico05.png) no-repeat center;background-size: contain;}
+.mmylsbbtn06{background: url(../tempimg/userico06.png) no-repeat center;background-size: contain;}
+.mmylsbbtn07{background: url(../tempimg/userico07.png) no-repeat center;background-size: contain;}
+.mmylsbbtn08{background: url(../tempimg/userico08.png) no-repeat center;background-size: contain;}
+.mmylsbbtn09{background: url(../tempimg/userico09.png) no-repeat center;background-size: contain;}
+.mmylsbbtn10{background: url(../tempimg/userico10.png) no-repeat center;background-size: contain;}
+.mmylsbbtn12{background: url(../tempimg/userico12.png) no-repeat center;background-size: contain;}
+.mmylsbbtn13{background: url(../tempimg/userico13.png) no-repeat center;background-size: contain;}
+.mmylsbbtn14{background: url(../tempimg/jd.png) no-repeat center;background-size: contain;}
+.mmylsbbtn15{background: url(../tempimg/pintuanico.png) no-repeat center;background-size: contain;}
+.mmylsbbtn16{background: url(../tempimg/userico11.png) no-repeat center;background-size: contain;}
+.mmylsbbtn17{background: url(../tempimg/userico14.png) no-repeat center;background-size: contain;}
+.indorderwrap a em{font-size: 0.75rem;}
+.indorderwrap a i span{position: absolute;top: 0rem;right: -1.25rem;overflow: hidden; width: 1.25rem;height: 1.25rem;line-height: 1.35rem;text-align: center;display: block;border-radius: 1.25rem;font-size: 0.75rem;color: white;}
+.userShoppingBOX{width: 100%;height: 2.25rem;margin-top: 0.625rem; background: white;border-top:0.063rem solid #ededed;border-bottom:0.063rem solid #ededed;}
+.userShoppingBOX a{display: block;width: 100%;height: 2.25rem;line-height: 2.25rem;box-sizing:border-box;padding: 0px 0.625rem;}
+.userShoppingBOX a .mmyshoppingico{margin: 0.35rem 0.625rem 0rem 0rem;width: 1.625rem;height: 1.625rem;background: url(../tempimg/me_item_shop.png) no-repeat center;background-size:contain;float: left;}
+.userShoppingBOX a em{font-size: 0.75rem;float: left;}
+.userShoppingBOX a .mmymore{width: 1.313rem;height: 0.563rem;background: url(../tempimg/new.gif) no-repeat center;float: left;margin: 0.625rem 0rem 0rem 0.625rem;}
+.wrappernav{width: 100%;margin-top: 0.625rem;border-top: 0.063rem solid #e5e5e5;background: white;float: left;}
+.wrappernav ul{width: 100%;}
+.wrappernav ul li{width: 33%;background: white;border-right: 0.063rem solid #e5e5e5;border-bottom: 0.063rem solid #e5e5e5;margin-bottom: 0.063rem;padding-bottom: 5%;float: left;overflow: hidden;}
+.wrappernav ul li:hover{background: #f2f2f2;}
+.wrappernav ul li a{width: 100%;display: block;}
+.wrappernav ul li a .wrapindcon{margin-top:-100%;}
+.wrappernav ul li a .wrapindcon i{width: 2.25rem;height: 2.25rem;margin: 20% auto 6%;position: relative;}
+.wrappernav ul li a .wrapindcon em{width: 100%;text-align: center;font-size: 0.875rem;}
+.wrappernav ul li:nth-child(3){border-right: 0px;}
+.wrappernav ul li:nth-child(6){border-right: 0px;}
+.wrappernav ul li:nth-child(9){border-right: 0px;}
+.wrappernav ul li:nth-child(12){border-right: 0px;}
+/*我的首页导航横排版*/
+.pubusernav{width: 100%;background: white;border-top: 0.063rem solid #ededed;border-bottom: 0.063rem solid #ededed;margin-bottom: 0.625rem;}
+.pubusernav a{display: block;width: 100%;border-bottom: 0.063rem solid #ededed;box-sizing:border-box;padding: 0.625rem;}
+.pubusernav a .usernavico{width: 1.25rem;height: 1.25rem;margin:0.063rem 0.313rem 0 0;}
+.pubusernav a em{font-size: 0.875rem;}
+.pubusernav a .usernavi{margin: 0.625rem 0 0 0.313rem}
+.pubusernav a span{font-size: 0.75rem;margin-top: 0.063rem;}
+.pubusernav a:last-child{border-bottom: 0px;}
+/*订单状态列表页*/
+.ordernav{width: 100%;position: fixed;z-index: 99; height: 2.75rem;background: white;overflow: hidden;box-shadow: 0px 0.063rem 3px #bdbdbd;}
+.ordernav ul{max-width: 640px;min-width: 320px;margin: 0 auto;}
+.ordernav ul li{float: left;width: 20%;height: 2.75rem;}
+.ordernav ul li a {display: block;width: 100%;height: 2.625rem;line-height: 2.75rem;font-size: 0.875rem;text-align: center;}
+.orderBox{width: 100%;background: white;margin:1.25rem auto 0;overflow: hidden;}
+.orderTitBox{width: 100%;box-sizing:border-box;padding: 0.625rem;border-bottom:0.063rem dashed #c9c9c9;float: left;}
+.orderTitBox em{font-size: 0.875rem;float: left;}
+.orderTitBox span{float: right;font-size: 0.875rem;display: block;}
+.orderImgCon{width: 100%;box-sizing:border-box;padding: 0.625rem;position: relative;display: block;border-bottom:0.063rem dashed #c9c9c9;}
+.orderImgCon .orderasl{width: 4.375rem;height: 4.375rem;}
+.orderImgCon .orderasl img {width: 4.375rem;height: 4.375rem;}
+.orderImgCon .orderasr{width: 100%;box-sizing:border-box;overflow: hidden;padding:0rem 1.25rem 0rem 5rem;top: 0.625rem;position: absolute;z-index: 2;float: left;}
+.orderImgCon .orderasr .orderconr{float: left;height: 4.375rem;width: 70%;}
+.orderImgCon .orderasr .orderconr p{width: 100%;height: 3.125rem;line-height: 1.25rem;font-size: 0.875rem;overflow: hidden;}
+.orderImgCon .orderasr .orderconr span{font-size: 0.875rem;margin-top: 0.625rem}
+.orderImgCon .orderasr .orderconl {float: right;height: 4.375rem;width: 30%;}
+.orderImgCon .orderasr .orderconl span{font-size: 0.875rem;display: block;text-align: right;}
+.orderquana{width: 100%;display: block;float: left;}
+.orderPriceBox {width: 100%;box-sizing:border-box;padding: 0.625rem;border-bottom:0.063rem dashed #c9c9c9;font-size: 0.875rem}
+.orderNavBox{width: 100%;box-sizing:border-box;padding: 0.625rem;float: left;}
+.orderNavBox a{display: block;border-radius: 2px;font-size: 0.875rem;float: right;padding: 0.125rem 0.625rem;}
+.orderNavBtn01{border:0.063rem solid #c7c7c7;color: #686868;margin-left: 0.625rem}
+.orderNavBtn01:hover{border:0.063rem solid #e54d00;color: #ff5500;}
+.orderNavBtn01:visited{color: #686868}
+.orderNavBtn02{margin-left: 0.625rem;border:0.063rem solid #ff5500;}
+.orderNavBtn02:visited{color: white}
+/*发货层*/
+.fafuokua{max-width: 640px;min-width: 320px;width: 100%;padding-top:2.75rem;position: fixed;z-index: 97;top:0;}
+.weui_label,.weui_cell_hd{font-size: 1rem;}
+.divspacing{width: 100%;box-sizing:border-box;padding: 1.25rem 0.625rem 0;}
+
+/*订单状态详情页*/
+.orderAddressBox{width: 100%;min-height: 5rem;background: white;border-bottom: 0.063rem solid #ededed}
+.orderAddressBox .orderAdbg{display: block;height: 0.625rem;width: 100%;background: url(../tempimg/mailbg.jpg);margin-bottom: 0.625rem;}
+.orderAddressBox .ordAdCon{width: 100%;height:5rem;position: relative;overflow: hidden;}
+.orderAddressBox .ordAdCon aside:first-child{width: 2.215rem;height:5rem;position: absolute;top: 0;left: 0rem;z-index: 1;margin-left: 0.625rem;}
+.orderAddressBox .ordAdCon aside:first-child i{width: 2.125rem;height: 2.688rem;background: url(../tempimg/addressico.png) no-repeat center;background-size: 80%;margin-top: 0.75rem;}
+.orderAddressBox .ordAdCon aside:last-child{width: 100%;min-height: 4.5rem;position: absolute;top: 0;left: 0;box-sizing:border-box;padding: 0rem 0.625rem 0rem 3.25rem;z-index: 2}
+.orderAddressBox .ordAdCon aside:last-child div{width: 96%;height: 1.625rem;line-height: 1.625rem;border-bottom: 0.063rem dashed #c9c9c9;margin-bottom: 0.45rem}
+.orderAddressBox .ordAdCon aside:last-child div em{font-size: 0.875rem;float: left;margin-right: 1.25rem}
+.orderAddressBox .ordAdCon aside:last-child div span{font-size: 0.875rem;float: left;}
+.orderAddressBox .ordAdCon aside:last-child p{font-size: 0.875rem;}
+.orddeImgBox{width: 100%;box-sizing:border-box;padding: 0.625rem;background: white;position: relative;border-bottom: 0.063rem solid #ededed;}
+.orddeImgBox span{width: 4.25rem;height: 4.25rem; display: block;}
+.orddeImgBox span img{max-width:100%;}
+.orddeImgBox .orddeimgdiv{position: absolute;z-index: 2;top: 0.625rem;width: 100%;box-sizing:border-box;padding:0rem 0.625rem 0rem 4.875rem;font-size: 0.875rem;overflow: hidden;}
+.orddeImgBox .orddeimgdiv p{width: 100%;height: 2.875rem;overflow: hidden;font-size: 0.875rem;line-height: 1.25rem;}
+.orddeImgBox .orddeimgdiv em{width: 100%;font-size: 0.875rem}
+.orddePubBox{width: 100%;background: white;margin-top: 0.625rem;border-top:0.063rem solid #ededed;border-bottom:0.063rem solid #ededed;box-sizing:border-box;padding: 0rem 0.625rem;float: left;}
+.orddePubBox .orddepubCon{width: 100%;padding-top:0.625rem;float: left;}
+.orddePubBox .orddepubCon:last-child{border: 0px;margin-bottom: 0.625rem}
+.orddePubBox .orddepubCon span{font-size: 0.875rem;float: left;}
+.orddePubBox .orddepubCon em{font-size: 0.875rem;float: right;}
+.orddePubBox .orddepubConList{width: 100%;margin: 0.625rem auto 0;}
+.orddePubBox .orddepubConList .wlpcontent{width: 100%;margin-bottom: 0.625rem;}
+.orddePubBox .orddepubConList .wlpcontent p,.orddePubBox .orddepubConList .wlpcontent time{font-size: 0.875rem;}
+.orddePubBox .orddepubConList .pubLoading{width: 1.563rem;height: 1.563rem;background: url(../tempimg/m_loading.gif) no-repeat center; background-size:100%;margin: 0 auto}
+.orddePubBox .orddexf{width: 100%;font-size: 0.875rem;border-bottom: 0.063rem solid #ededed;padding: 0.625rem 0rem;}
+.orddePubBox .orddenavbox{width: 100%;padding: 0.625rem 0;float:left;display: block;margin: 0 auto;border-bottom: 0.063rem dashed #c9c9c9;}
+.orddePubBox .orddenavbox:last-child{border: 0px}
+.orddePubBox .orddenavbox em{font-size: 0.875rem;float: left;}
+.orddePubBox .orddenavbox p{font-size: 0.875rem;float: left;font-weight: 700;}
+.orddePubBox .orddenavbox i{display: block;margin:0.5rem 0rem 0rem 0.625rem;float: right;}
+.orddePubBox .orddenavbox span{font-size: 0.875rem;float: right;}
+.orderpubnav{width: 100%;margin-top: 1.25rem;box-sizing:border-box;padding: 0rem 0.625rem;}
+.orderpubnav a{display: block;width: 100%;margin-bottom: 0.875rem;height: 2.75rem;line-height: 2.75rem;border-radius: 2px;font-size: 1rem;text-align: center;}
+/*付款页*/
+.paybod{width: 100%;height: 40rem;background: white;display: block;}
+.gopaypicebox{width: 100%;height: 8rem;text-align: center;border-bottom: 0.063rem solid #ededed;background: white;}
+.gopaypicebox p {width: 100%;height: 1.25rem;text-align: center;font-size: 1rem;font-weight: bold;color: #666;}
+.gopaypicebox em {width: 100%;height: 2.25rem;text-align: center;font-size: 2.25rem;color: #333;margin-top: 0.625rem;}
+.checkdanbox{width: 100%;height: 2.625rem;line-height: 2.625rem;background: white;border-bottom: 0.063rem solid #ededed;}
+.checkdanbox em:first-child{font-size: 1rem;color: #999;float: left;margin-left: 0.625rem;}
+.checkdanbox em:last-child{font-size: 1rem;color: #666;float: right;margin-right: 0.625rem;}
+.checkdanbox p{font-size: 0.875rem;text-align: right;color: #666;width: 70%;float: right;margin-right:0.625rem;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+/*购物车*/
+.shopcartwrap{width: 100%;background: white;margin-bottom: 1.25rem;padding-top: 0.313rem;box-sizing:border-box;}
+.shopcartcon{width: 100%;position: relative;margin-top: 0.625rem;}
+.shopcartcon .shopseclnav{width:7.625rem;height: 5.625rem;position: absolute;z-index: 1;}
+.shopcartcon .shopseclnav a{display: block;width: 1.25rem;height: 1.25rem;border-radius: 1.25rem;float: left;margin: 1.625rem 0.45rem 0rem}
+.shopico02{background: url(../tempimg/bokico02.png) no-repeat center;background-size: contain;}
+.shopico01{background: url(../tempimg/bokico.png) no-repeat center;background-size: contain;}
+.shopcartcon .shopseclnav img{width: 5rem;height: 5rem;float: left;}
+.shopcartcon .shopcarttitwrap{width: 100%;height: 5.625rem;position: absolute;z-index: 2;box-sizing:border-box;padding-left: 7.625rem;}
+.shopcartcon .shopcarttitwrap a{display: block;}
+.shopcartcon .shopcarttitwrap .shopp01{width: 100%;font-size: 0.75rem;font-weight: 700;}
+.shopcartcon .shopcarttitwrap .shoppubwp{width: 100%;height: 2rem;line-height:2rem }
+.shopcartcon .shopcarttitwrap .shopspan{font-size: 0.75rem;float: left;}
+.shopcartcon .shopcarttitwrap .shopem{font-size: 0.75rem;float: right;margin-right: 0.625rem}
+.shopcartcon .shopcarttitwrap .shopcartnomwrap {width: 100%;}
+.shopcartcon .shopcarttitwrap .shopcartnomwrap .shoplose{display: block;width: 1.563rem;height: 1.563rem;border-radius: 2px 0px 0px 2px;float:left;background: url(../tempimg/lose.png) no-repeat center;background-size:60%;border:0.063rem solid #999;}
+.shopcartcon .shopcarttitwrap .shopcartnomwrap .shopadd{display: block;width: 1.563rem;height: 1.563rem;border-radius: 0px 2px 2px 0px;float:left;background: url(../tempimg/add.png) no-repeat center;background-size:60%;border:0.063rem solid #999;}
+.shopcartcon .shopcarttitwrap .shopcartnomwrap input{width: 2.625rem;height: 1.563rem;border-top: 0.063rem solid #999;border-radius: 0px;border-bottom: 0.063rem solid #999;float:left;font-size: 1rem;color: #666;text-align: center;}
+.shopcartcon .shopcarttitwrap .shopcartnomwrap .shopcartpirce{float: right;text-align: right;margin-right: 0.313rem}
+.shopcartcon .shopcarttitwrap .shopcartnomwrap .shopcartpirce em{font-size: 0.75rem;color: #666;line-height: 1rem}
+.shopcartcon .shopcarttitwrap .shopcartnomwrap .shopdelico{display: block;width: 1.625rem;height: 1.625rem;background: url(../tempimg/delico.png) no-repeat center;background-size: contain;float: right;margin-right: 0.625rem;}
+.stylecss{width: 100%;height: 5.625rem;clear: both;}
+.stylecss span{display: block;width: 100%;height: 5.625rem;border-bottom: 0.063rem solid #ededed}
+.shopcartadsnav{width: 100%;box-sizing:border-box;background: white;padding: 0.625rem;margin-bottom: 1.25rem;}
+.shopcartadsnav a{display: block;width: 100%;}
+.shopcartadsnav a em{font-size: 0.875rem;}
+.shopcartadsnav a i{margin-top: 0.625rem}
+.pubaddrssswarp{width: 100%;box-sizing:border-box;background: white;padding:0rem 0.625rem;}
+.pubaddressbox{width: 100%;padding:0.625rem 0rem;border-bottom: 0.063rem solid #ededed;position: relative; display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.pubaddressbox em{font-size: 0.875rem;width: 3.625rem;margin-right: 0.625rem;}
+
+.cell_primary .inputpos{width: 100%;border: 0;outline: 0;font-size: 0.875rem;-webkit-appearance: none;background-color: transparent;color: inherit;height: 1.41176471rem;line-height: 1.41176471;}
+.scadsbox{width: 100%;}
+.scadsbox em{width: 100%;box-sizing:border-box;padding: 0.625rem;font-size: 0.875rem;}
+.scadsbox .scadsboxcell{width: 100%;box-sizing:border-box;padding: 0.625rem 0.625rem 0;background: white;}
+.textpos{width: 100%;height: 3.125rem;line-height: 1.25rem;font-size: 0.875rem;}
+.pubaddressbox i{position: absolute;right: 0rem;top:1.5rem;}
+.pubaddressbox:last-child{border-bottom: 0;}
+.pubaddressbox .addressarticle{width: 100%;box-sizing:border-box;padding-left:4.25rem;position: absolute;z-index: 2;top: 0.875rem;}
+.pubaddressbox .pubadspan{width: 100%;box-sizing:border-box;padding-left:4.25rem;font-size: 0.875rem;position: absolute;z-index: 2;top: 0.875rem;}
+.address_box_div{width: 100%;position: absolute;z-index:1002;}
+.address_box{width: 90%;margin: 20% auto 0rem;position: relative;background: white;}
+.address_one{width:100%;min-height: 2.5rem;display:inline-block;position: relative; margin-top:0.625rem;border-top:0.063rem solid #ccc;padding-top:0.625rem;}
+.no_top{border-top:none;}
+.address_name{width:30%;display:inline-block;margin-left:5px;}
+.address_mobile{width:60%;display:inline-block;}
+.address_address{width:96%;margin-top: 0.313em;display:inline-block;margin-left:5px;white-space:normal;word-break:break-all;}
+.address_title{	width:100%;overflow: hidden; box-sizing:border-box;padding:0 0.625rem;}
+.close_button{display: block;overflow: hidden; float:right;width: 2rem;height: 2rem; background: url(../tempimg/x.png) no-repeat center;background-size:contain;margin-top: 0.5rem;}
+.address_list_box{width:100%;display:inline-block;min-height:14rem;max-height: 14rem; overflow-x:hidden;overflow-y:auto;}
+.addressfont{font-size: 1rem;float: left;padding-top: 1.125rem;}
+.addressiconbox{position: absolute;left: 0.625rem; z-index: 1001;width: 1.25rem;height: 2rem;background: url(../tempimg/addressico.png) no-repeat center;background-size: contain;float: left;}
+.addresswrapr{color: #999;font-size: 0.875rem;float: left;position: absolute;z-index: 1002;width: 100%;box-sizing:border-box;padding:0rem 0rem 0.625rem 2.625rem;}
+.address_one:hover .addressiconbox{background: url(../tempimg/addressico01.png) no-repeat center;background-size: contain;}
+.changeaddresswrap{width: 100%;}
+.changeaddresswrap .changeaddressbox{display: block;width: 100%;box-sizing:border-box;padding-left: 2.188rem;margin-bottom: 0.313rem}
+.changeaddresswrap .changeaddressbox div{width: 100%;height: 2.5rem;line-height: 2.5rem;font-size: 0.875rem;color: #666;border-top: 0.063rem solid #d1d1d1;border-bottom: 0.063rem solid #d1d1d1;}
+.changeaddresswrap .changeaddressbox div em{float: left;}
+.changeaddresswrap .changeaddressbox div i{width: 0.75rem;height: 0.75rem;background: url(../tempimg/downico04.png) no-repeat center; background-size: contain;margin: 0.938rem 0.625rem 0rem 0rem;display: block;float: right;}
+.changeaddresswrap .shopaddresscon {display: block;width: 100%;text-align: left;margin-bottom: 0.313rem}
+.changeaddresswrap .shopaddresscon i{width: 2.188rem;height: 2.188rem;background: url(../tempimg/bi.png) no-repeat center;background-size: 60%;display: inline-block;}
+.changeaddresswrap .shopaddresscon div {display: inline-block;color:#666;font-size: 0.75rem;font-style: normal;width: 85%}
+.changeaddresswrap .shopaddresscon div em{float: left;margin-bottom: 0.313rem}
+.changeaddresswrap .shopaddresscon div p{float: right;}
+.changeaddresswrap .shopaddresscon div address{width: 100%;clear: both;}
+.shopcartpaywrap{width: 100%;height: 3.063rem;overflow: hidden; position: fixed;z-index: 999;bottom: 0rem;left: 0;background: white;border-top: 0.063rem solid #d1d1d1}
+.shopsecectwrap{float: left;}
+.shopsecectwrap a{display: block;height: 3.063rem;}
+.shopsecectwrap a i{display: block;width: 1.25rem;height: 1.25rem;border-radius: 1.25rem;float: left;margin: 1.625rem 0.313rem 0rem }
+.shopsecectwrap a em{float: left;font-size: 0.938rem;line-height: 3.25rem}
+.shopmessagewrap{float: right;}
+.shopmessagewrap div{float: left;font-size: 0.75rem;text-align: right;}
+.shopmessagewrap div em{margin:0.625rem 0.625rem 0rem 0rem;}
+.shopmessagewrap div span{margin-right: 0.625rem}
+.shopmessagewrap nav{float: right;height: 3.063rem;}
+.shopmessagewrap nav a{width:6rem;height: 3.063rem;text-align: center;font-size: 1rem;color: white;line-height: 3.063rem;display: block;}
+.shopmessagewrap nav a p{width: 90%;height: 3.063rem;margin: 0rem auto ;}
+.shopmessagewrap nav a p i{width: 1.875rem;height: 1.875rem;margin: 0.625rem;float: left;background: url(../tempimg/zhuanqian-icon.png) no-repeat center;background-size: contain;}
+.shopmessagewrap nav a p font{float: left;}
+.shoparinpwrap{width: 100%;margin-top: 1.25rem;border-top: 0.063rem solid #d1d1d1;border-bottom: 0.063rem solid #d1d1d1;background: white;}
+.shoparinpwrap .publicsiwrap{width: 100%;height: 2.5rem;overflow: hidden; border-bottom: 0.063rem solid #d1d1d1;position: relative;}
+.shoparinpwrap .publicsiwrap em{width: 5rem;height: 2.5rem;line-height: 2.75rem;font-size: 1rem;box-sizing:border-box;padding-left:0.625rem;color: #666;position: absolute;z-index: 1;}
+.shoparinpwrap .publicsiwrap span{width: 100%;height: 2.5rem;position: absolute;z-index: 2;box-sizing:border-box;padding-left: 5.25rem;}
+.shoparinpwrap .publicsiwrap span input{width: 100%;height: 2.5rem;border:0rem;font-size: 1rem;}
+.shoparinpwrap .publicsiwrap span select{width: 100%;height: 2.5rem;border:0rem;font-size: 1rem;}
+.pubbtnwrap{width: 90%;height: 2.75rem;margin: 2.25rem auto 0rem}
+.pubbtnwrap a{display: block;width: 100%;height: 2.25rem;line-height: 2.25rem;text-align: center;font-size: 1rem;color: white;background: #ff5500;border-radius: 2px;}
+.freight{width: 100%;height: 2rem;line-height: 2rem;margin-bottom: 0.625rem;box-sizing:border-box;padding-left: 2.188rem;text-align: right;}
+.freight div{width: 100%;height: 2rem;border-bottom: 0.063rem solid #d1d1d1;box-sizing:border-box;padding-right: 0.625rem}
+.freight div em{font-size: 0.75rem;color: #666;width: 100%;}
+/*代理订单*/
+.proxyNavwrap{width: 100%;position: fixed;z-index: 99; height: 2.75rem;background: white;overflow: hidden;box-shadow: 0px 0.063rem 3px #bdbdbd;}
+.proxyNavwrap ul{max-width: 640px;min-width: 320px;margin: 0 auto;}
+.proxyNavwrap ul li{float: left;width: 25%;height: 2.75rem;}
+.proxyNavwrap ul li a {display: block;width: 100%;height: 2.625rem;line-height: 2.75rem;font-size: 0.875rem;text-align: center;}
+.proxynamewrap{width: 100%;margin-top: 0.625rem;float: left; box-sizing:border-box;padding:0rem 0.625rem 0.625rem;background: white;border-top: 0.063rem solid #ededed;border-bottom: 0.063rem solid #ededed;}
+.proxynwb{width: 100%;font-size: 0.75rem;padding: 0.625rem 0rem;border-bottom: 0.063rem solid #ededed;float: left;}
+.proxynwb span{float: left;margin-right: 0.313rem;font-weight: 700;}
+.proxynwb em{float: left;}
+.proxynconb{width: 100%;font-size: 0.75rem;padding-top: 0.625rem;float: left;}
+.proxynconb span{float: left;margin-right: 0.313rem}
+.proxynconb em{float: left;}
+.datawarpper{width: 100%;background: white;border-bottom: 0.063rem solid #ededed}
+.datawarpper .datachart{width: 100%;padding-top: 0.625em;}
+.proxynba{font-size: 0.75rem;float: right;padding: 0.1rem 0.625rem;border-radius: 2px;}
+.proxyspwrap{width: 100%;margin-top: 0.625rem;}
+.proxylistbox{width: 100%;float: left;border-bottom:0.063rem solid #ededed;border-top: 0.063rem solid #ededed;box-sizing:border-box;padding:0rem 0.625rem;background: white;margin-bottom: 0.625rem}
+.proxylistbox .proxyddwrap{width: 100%;padding: 0.625rem 0rem;float: left; border-bottom:0.063rem solid #ededed;font-size: 0.75rem;}
+.proxylistbox .proxyddwrap em{float: left;}
+.proxylistbox .proxyddwrap span{float: right;}
+.proxylistbox .proxyddwrap p{float: left;}
+.proxylistbox .proxyddwrap div{float: right;margin-left: 0.625rem}
+.proxyprobox{width: 100%;height: 5rem;position: relative;border-bottom: 0.063rem solid #ededed;padding: 0.625rem 0rem}
+.proxyprobox .proxyimgbox{width: 5rem;height: 5rem;position: absolute;z-index: 1;}
+.proxyprobox .proxyimgbox img{width: 5rem;height: 5rem;}
+.proxyprobox .proxyimgwrap{width: 100%;height: 5rem;position: absolute;z-index: 2;box-sizing:border-box;padding-left: 5.625rem;}
+.proxyprobox .proxyimgwrap .proxytitwrap{width: 100%;height: 5rem;position: relative;}
+.proxyprobox .proxyimgwrap .proxytitwrap .proxytitbox{width: 100%;height: 4.25rem;position: absolute;z-index: 1;box-sizing:border-box;padding-right: 3rem}
+.proxyprobox .proxyimgwrap .proxytitwrap .proxytitbox p{width: 100%;height: 4.25rem;font-size: 0.75rem;line-height: 1.25rem;overflow:hidden;box-sizing:border-box;padding-top: 0.313rem}
+.proxyprobox .proxyimgwrap .proxytitwrap .proxypircebox{float: right;height: 4.25rem}
+.proxyprobox .proxyimgwrap .proxytitwrap .proxypircebox em{font-size: 0.75rem;}
+.proxypricewrap{width: 100%;font-size: 0.75rem;}
+.proxypricewrap span:first-child{float: left;}
+.proxypricewrap span:last-child{float: right;}
+/*我的砍价*/
+.mykjp{width: 100%;padding: 0.625rem;box-sizing:border-box;background: white;line-height: 1.25rem;font-size: 0.75rem;}
+/*我的二维码*/
+.qcoderbox{width: 100%;}
+.qcoderbox img{max-width: 100%;}
+/*我的红包*/
+.myRenTopBox{width: 100%;background: white;padding: 0.625rem;padding-top: 0;box-sizing:border-box;}
+.myRenLv{width: 100%;background: white;box-sizing:border-box;float: left;padding: 0.625rem 0rem;border-bottom: 0.063rem solid #ededed}
+.myRenLv div{width: 33.3%;float: left;}
+.myRenLv div em{width: 100%;font-size: 0.75rem;text-align: center;}
+.myRenLv div span{width: 100%;font-size: 1rem;text-align: center;display: block;}
+.myRenImgBox{width: 3.75rem;height: 3.75rem;margin: 0.625em auto;border:2px solid #ededed;border-radius: 2.25rem;display: block;}
+.myRenImgBox img{width: 3.75rem;height: 3.75rem;border-radius: 2.25rem;}
+.myRenMmoney{width: 100%;text-align: center;margin-bottom: 1.25rem;}
+.myRenMmoney em{font-size: 1.25rem;}
+.myRenMmoney span{font-size: 0.75rem;}
+.myRenNavBox{width: 100%;margin: 0 auto;border-radius: 2px;border:0.063rem solid #ff5500;overflow: hidden;}
+.myRenNavBox a{width: 50%;line-height: 2.5rem;float: left;text-align: center;font-size: 0.75rem;display: block;}
+.myRenNavBox .myRencolw{background: #fff;color: #323232;}
+.myRenDetails{width: 100%;background: white;}
+.myRenDetails .myRenDetCon{width: 100%;border-bottom: 0.063rem solid #ededed;min-height: 3.75rem;box-sizing:border-box;padding: 0.625rem;}
+.myRenDetails .myRenDetCon .myRenTitbox{width: 70%;height: 3.75rem;float: left;}
+.myRenDetails .myRenDetCon .myRenTitbox p{width: 100%;margin-bottom: 0.625rem;font-size: 0.75rem;}
+.myRenDetails .myRenDetCon .myRenTitbox i{font-style: normal;float: left;font-size: 0.625rem;padding: 0.125rem 0.313rem;border-radius: 0.063rem;}
+.myRenDetails .myRenDetCon .myRenTitbox time{font-style: normal;float: left;font-size: 0.75rem;margin: 0.125rem 0rem 0rem 0.313rem;}
+.myRenDetails .myRenDetCon .myRenMoney{width: 30%;height: 3.75em;float: left;}
+.myRenDetails .myRenDetCon .myRenMoney em{font-style: normal;font-size: 0.875rem;width: 100%;text-align: right;margin-bottom: 0.625rem;}
+.myRenDetails .myRenDetCon .myRenMoney span{display: block;font-size: 0.75rem;text-align: right;width: 100%;}
+.myRenAllBtn{width: 100%;height: 2.75rem;box-sizing:border-box;padding:0 0.625rem;clear: both;}
+.myRenAllBtn a{display: block;width: 100%;height: 2.75rem;line-height: 2.75rem;text-align: center;font-size: 1rem;}
+/*我的会员*/
+.muwarpper{width:100%;}
+.muwarpper a{width: 100%;height: 3.063rem;line-height: 3.063rem;display: block;border-bottom: 0.063rem solid #ededed;background: white;}
+.muwarpper a p{font-size: 0.875rem;float: left;margin:0rem 0.625rem 0rem 1.25rem;}
+.muwarpper a i{width: 1.125rem;height: 1.25rem;padding-top: 1.25rem;margin-right: 0.625rem;float: left; background: url(../tempimg/a2.png) no-repeat center;background-size: 100%;}
+.muwarpper a span{float: right;margin: 1.45rem 0.625rem 0rem;}
+.muwarpper a em{float: right;font-size: 1rem;}
+.muimgbox{float:left;width: 20%;}
+.muimgbox img{width:2.375rem;height: 2.375rem;border-radius: 2.375rem;margin: 0rem auto;}
+.mucontentp{width: 50%;float:left;}
+.mucontentp p{font-size: 0.75rem;color: #333;width: 100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-top: 0.625rem;}
+.mucontentp address{font-size: 0.75rem;color: #666;width: 100%;}
+.mutimebox{display: block;float:left;width: 30%;font-size: 0.75rem;line-height: 2.375rem;}
+.gmsywarpper{width: 100%;box-sizing:border-box;background: white;position: relative;}
+.gmsycontainer{background: white;float: left; width: 100%;box-sizing:border-box;padding:0.625rem 0rem;text-align: center;border-bottom: 0.063rem solid #ededed;}
+.gmsycontainer span{font-size: 0.75rem;width: 32%;display: block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.gmsycontainer a{color:#666;font-size: 0.75rem;width: 32%;display: block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.myusernav{width: 100%;position: fixed;z-index: 99;background: white;overflow: hidden;box-shadow: 0px 0.063rem 3px #bdbdbd;}
+.myusernav ul{max-width: 640px;min-width: 320px;margin: 0 auto;}
+.myusernav ul li{float: left;width: 33.3%;height: 2.75rem;}
+.myusernav ul li a {display: block;width: 100%;height: 2.625rem;text-align: center;}
+.myusernav ul li a p{width: 100%;text-align: center;font-size: 0.75rem;line-height: 1.875rem;}
+.myusernav ul li a em{width: 100%;text-align: center;font-size: 0.875rem;line-height: 0.125rem}
+/*注册页*/
+.zcheaderbox{width:100%;position: relative;padding-bottom: 1.25rem;}
+.zcheaderbox .zcbgimg{width:100%;}
+.zcheaderbox .zcbgimg img{max-width: 100%;}
+.zcheaderbox section{width: 100%;position: absolute;top: 20%;}
+.zcheaderbox section h1{width: 100%;font-size: 1.5rem;color: #ffeee5;text-align: center;}
+.zcheaderbox section em{width: 100%;font-size:1.5rem;color: #ffbb99;text-align: center;}
+
+
+
+/*我的资料,旧样式备用，未优化*/
+.indbtnright{z-index: 2;position: absolute;right: 0.625em;color: white;font-size: 0.875em;}
+.indbtnright:visited{color: white;}
+.gdinpbox {width: 100%;min-height: 6.375em;clear: both;background: white;padding:1.25em 0em 0.625em 0em;margin-bottom: 0.625em;border-top: 0.063rem solid #ededed;border-bottom: 0.063rem solid #ededed;}
+.gdinpbox section{width: 100%;min-height: 3.125em;clear: both;}
+.gdinpbox section em{margin-left: 0.625em;line-height: 3.625em;font-size: 0.875em;color: #666;float: left;}
+.gdinpbox section input{float: left;padding-left: 0.313em;-webkit-appearance: none;margin: 0.625em 0em 0em 1.25em;width: 70%;height: 2.375em;border:0.063rem solid #ededed;font-size: 0.875em;color: #666;border-radius: 0em;}
+.gdinpbox section select{display: block; width: 20%;height: 2.25em;padding-left: 0.625em;text-align: center;float: left;-webkit-appearance: none;border:0.063rem solid #ededed;border-radius: 0em;font-size: 0.875em;color: #666;margin: 0.625em 0em 0em 1.25em;}
+.gdinpbox section strong {font-weight: 100;font-size: 0.875em;color: #888;margin: 1.25em 0em 0em 1.25em;float: left;}
+.gdinpbox section div {float: left;width: 70%;height: 2.375em;margin: 0.625em 0em 0em 1.25em;}
+.gdinpbox section div i {width: 20px;height:20px;float: left;margin-right: 0.625em;margin-top: 0.4em;background: url(images/gou02.png) no-repeat center;background-size: 100%;}
+.gdinpbox section div i:hover{background: url(images/gou.png) no-repeat center;background-size: 100%;}
+.gdinpbox section div .sex_select{background: url(images/gou.png) no-repeat center;background-size: 100%;}
+.gdinpbox section div b{font-size: 0.875em;float: left;color: #666;font-weight: 100;margin-top: 0.625em;}
+.gdinpbox section img{float: left; margin: 0.625em 0em 0em 1.25em;width: 5.5em;height: 5.5em;}
+.gdinpbox section span{clear: both;width: 50%;padding-left: 4em;height: 1.625em;line-height: 1.625em;font-size: 0.875em;color: red;}
+/*错误页面,未优化*/
+.errorwrap{width: 80%;height: 4em;overflow: hidden;margin: 3.75em auto 3.125em;box-sizing:border-box;padding: 0.938em;background: white;border: 0.063rem solid #ededed}
+.errorwrap p{width: 85%;font-size: 0.938em;color: #fa4b5a;float: left;}
+.errorwrap i{width: 1.625em;height: 1.625em;border-radius: 1.625em;background: url(../tempimg/tanico.png) no-repeat center;background-size: 100%;float: right;margin-top: 0.313em}
+.errornav{width: 80%;height: 2.75em;margin: 0 auto;}
+.errornav a{display: block;width: 100%;height: 2.75em;line-height: 2.75em;border:0.063rem solid #e67781; background: #febac0;text-align: center;font-size: 1em;color:white;border-radius: 4px;}

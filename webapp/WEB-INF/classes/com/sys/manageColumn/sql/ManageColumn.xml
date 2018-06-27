@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="ManageColumn">
+	<typeAlias alias="ManageColumn" type="com.sys.manageColumn.model.ManageColumn"/>
+	
+    <sql id="getManageColumnList_body">
+        SELECT a.*,b.columnName as parentColumnName FROM manage_column a left join manage_column b on a.parentColumnID = b.columnId
+        <dynamic prepend="WHERE">
+            <isNotNull prepend="AND" property="columnId"> a.columnId=#columnId# </isNotNull>
+            <isNotNull prepend="AND" property="columnName"> a.columnName=#columnName# </isNotNull>
+            <isNotNull prepend="AND" property="columnUrl"> a.columnUrl=#columnUrl# </isNotNull>
+            <isNotNull prepend="AND" property="parentColumnID"> a.parentColumnID=#parentColumnID# </isNotNull>
+            <isNotNull prepend="AND" property="state"> a.state=#state# </isNotNull>
+            <isNotNull prepend="AND" property="columnOrder"> a.columnOrder=#columnOrder# </isNotNull>
+            <isNotNull prepend="AND" property="columnImg"> a.columnImg=#columnImg# </isNotNull>
+        </dynamic>
+  		<isNotNull prepend="" property="sortColumn">  order by $sortColumn$ </isNotNull>
+    </sql>
+    
+    <select id="getManageColumnListByRole" parameterClass="ManageColumn" resultClass="ManageColumn">
+        SELECT a.*,b.columnName as parentColumnName FROM manage_column a left join manage_column b on a.parentColumnID = b.columnId
+        left join manage_admin_role_column r on r.columnId = a.columnId
+        <dynamic prepend="WHERE">
+            <isNotNull prepend="AND" property="roleId"> r.roleId=#roleId# </isNotNull>
+            <isNotNull prepend="AND" property="columnId"> a.columnId=#columnId# </isNotNull>
+            <isNotNull prepend="AND" property="columnName"> a.columnName=#columnName# </isNotNull>
+            <isNotNull prepend="AND" property="columnUrl"> a.columnUrl=#columnUrl# </isNotNull>
+            <isNotNull prepend="AND" property="parentColumnID"> a.parentColumnID=#parentColumnID# </isNotNull>
+            <isNotNull prepend="AND" property="state"> a.state=#state# </isNotNull>
+            <isNotNull prepend="AND" property="columnOrder"> a.columnOrder=#columnOrder# </isNotNull>
+            <isNotNull prepend="AND" property="columnImg"> a.columnImg=#columnImg# </isNotNull>
+        </dynamic>
+  		<isNotNull prepend="" property="sortColumn">  order by $sortColumn$ </isNotNull>
+    </select>
+
+    <select id="getManageColumnListCount" resultClass="int">
+        SELECT COUNT(*) FROM (
+            <include refid="getManageColumnList_body" />
+        ) AS myTable 
+    </select>
+
+    <select id="getManageColumnList" parameterClass="ManageColumn" resultClass="ManageColumn">
+        SELECT * FROM (
+            <include refid="getManageColumnList_body" />
+        ) AS myTable limit #rowStart# , #rowCount# 
+    </select>
+
+    <select id="getManageColumn" parameterClass="ManageColumn" resultClass="ManageColumn">
+       <include refid="getManageColumnList_body" />
+    </select>
+
+    <insert id="insertManageColumn">
+        INSERT INTO manage_column ( 
+        <dynamic prepend="">
+			<isNotNull prepend="" property="columnName"> columnName </isNotNull>
+			<isNotNull prepend="," property="columnUrl"> columnUrl </isNotNull>
+			<isNotNull prepend="," property="parentColumnID"> parentColumnID </isNotNull>
+			<isNotNull prepend="," property="state"> state </isNotNull>
+			<isNotNull prepend="," property="columnOrder"> columnOrder </isNotNull>
+			<isNotNull prepend="," property="columnImg"> columnImg </isNotNull>
+        </dynamic>
+        )
+        VALUES (
+        <dynamic prepend="">
+		    <isNotNull prepend="" property="columnName"> #columnName# </isNotNull>
+		    <isNotNull prepend="," property="columnUrl"> #columnUrl# </isNotNull>
+		    <isNotNull prepend="," property="parentColumnID"> #parentColumnID# </isNotNull>
+		    <isNotNull prepend="," property="state"> #state# </isNotNull>
+		    <isNotNull prepend="," property="columnOrder"> #columnOrder# </isNotNull>
+		    <isNotNull prepend="," property="columnImg"> #columnImg# </isNotNull>
+        </dynamic>
+        )
+        <selectKey keyProperty="columnId" resultClass="int">
+			SELECT @@IDENTITY AS columnId 
+		</selectKey>
+    </insert>
+
+    <update id="updateManageColumn">
+        UPDATE manage_column
+        <dynamic prepend="SET">
+		    <isNotNull prepend="," property="columnId"> columnId=#columnId# </isNotNull>
+		    <isNotNull prepend="," property="columnName"> columnName=#columnName# </isNotNull>
+		    <isNotNull prepend="," property="columnUrl"> columnUrl=#columnUrl# </isNotNull>
+		    <isNotNull prepend="," property="parentColumnID"> parentColumnID=#parentColumnID# </isNotNull>
+		    <isNotNull prepend="," property="state"> state=#state# </isNotNull>
+		    <isNotNull prepend="," property="columnOrder"> columnOrder=#columnOrder# </isNotNull>
+		    <isNotNull prepend="," property="columnImg"> columnImg=#columnImg# </isNotNull>
+        </dynamic>
+
+        <dynamic prepend="WHERE">
+        	columnId = #columnId#
+        </dynamic>
+    </update>
+    
+    <delete id="removeManageColumn">
+        delete from manage_column where columnId = #columnId#
+    </delete>
+</sqlMap>

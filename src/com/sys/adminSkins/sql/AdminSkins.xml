@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="AdminSkins">
+	<typeAlias alias="AdminSkins" type="com.sys.adminSkins.model.AdminSkins"/>
+	
+    <sql id="getAdminSkinsList_body">
+        SELECT a.* FROM manage_admin_skins a
+        <dynamic prepend="WHERE">
+            <isNotNull prepend="AND" property="skinId"> a.skinId=#skinId# </isNotNull>
+            <isNotNull prepend="AND" property="adminId"> a.adminId=#adminId# </isNotNull>
+            <isNotNull prepend="AND" property="dialog"> a.dialog=#dialog# </isNotNull>
+            <isNotNull prepend="AND" property="style"> a.style=#style# </isNotNull>
+            <isNotNull prepend="AND" property="kkpager"> a.kkpager=#kkpager# </isNotNull>
+            <isNotNull prepend="AND" property="kkpager"> a.navgType=#navgType# </isNotNull>
+        </dynamic>
+  		<isNotNull prepend="" property="sortColumn">  order by $sortColumn$ </isNotNull>
+    </sql>
+
+    <select id="getAdminSkinsListCount" resultClass="int">
+        SELECT COUNT(*) FROM (
+            <include refid="getAdminSkinsList_body" />
+        ) AS myTable 
+    </select>
+
+    <select id="getAdminSkinsList" parameterClass="AdminSkins" resultClass="AdminSkins">
+        SELECT * FROM (
+            <include refid="getAdminSkinsList_body" />
+        ) AS myTable limit #rowStart# , #rowCount# 
+    </select>
+
+    <select id="getAdminSkins" parameterClass="AdminSkins" resultClass="AdminSkins">
+       <include refid="getAdminSkinsList_body" />
+    </select>
+
+    <insert id="insertAdminSkins">
+        INSERT INTO manage_admin_skins ( 
+        <dynamic prepend="">
+			<isNotNull prepend="" property="adminId"> adminId </isNotNull>
+			<isNotNull prepend="," property="dialog"> dialog </isNotNull>
+			<isNotNull prepend="," property="style"> style </isNotNull>
+			<isNotNull prepend="," property="kkpager"> kkpager </isNotNull>
+			<isNotNull prepend="," property="skStyle"> skStyle </isNotNull>
+			<isNotNull prepend="," property="navgType"> navgType </isNotNull>
+			<isNotNull prepend="," property="navgSet"> navgSet </isNotNull>
+        </dynamic>
+        )
+        VALUES (
+        <dynamic prepend="">
+		    <isNotNull prepend="" property="adminId"> #adminId# </isNotNull>
+		    <isNotNull prepend="," property="dialog"> #dialog# </isNotNull>
+		    <isNotNull prepend="," property="style"> #style# </isNotNull>
+		    <isNotNull prepend="," property="kkpager"> #kkpager# </isNotNull>
+		    <isNotNull prepend="," property="skStyle"> #skStyle# </isNotNull>
+		    <isNotNull prepend="," property="navgType"> #navgType# </isNotNull>
+		    <isNotNull prepend="," property="navgSet"> #navgSet# </isNotNull>
+        </dynamic>
+        )
+        <selectKey keyProperty="skinId" resultClass="int">
+			SELECT @@IDENTITY AS skinId 
+		</selectKey>
+    </insert>
+
+    <update id="updateAdminSkins">
+        UPDATE manage_admin_skins
+        <dynamic prepend="SET">
+		    <isNotNull prepend="," property="skinId"> skinId=#skinId# </isNotNull>
+		    <isNotNull prepend="," property="adminId"> adminId=#adminId# </isNotNull>
+		    <isNotNull prepend="," property="dialog"> dialog=#dialog# </isNotNull>
+		    <isNotNull prepend="," property="style"> style=#style# </isNotNull>
+		    <isNotNull prepend="," property="kkpager"> kkpager=#kkpager# </isNotNull>
+		    <isNotNull prepend="," property="skStyle"> skStyle=#skStyle# </isNotNull>
+		    <isNotNull prepend="," property="navgSet"> navgSet=#navgSet# </isNotNull>
+		    <isNotNull prepend="," property="navgType"> navgType=#navgType# </isNotNull>
+        </dynamic>
+
+        <dynamic prepend="WHERE">
+        	skinId = #skinId#
+        </dynamic>
+    </update>
+    
+    <delete id="removeAdminSkins">
+        delete from manage_admin_skins where skinId = #skinId#
+    </delete>
+</sqlMap>
